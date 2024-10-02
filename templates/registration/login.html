@@ -1,0 +1,46 @@
+<!-- templates/registration/login.html -->
+{% load static %}
+{% load custom_tags %}  <!-- Asegúrate de incluir esta línea -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - CalendarioPyme</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Incluye tu archivo CSS aquí -->
+</head>
+<body>
+    <div class="container-form">
+        <h1>CalendarioPyme</h1>
+        <h3>CalendarioPyme te ayuda a organizarte</h3>
+        <hr>
+
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                <p>Tu usuario y contraseña no coinciden. Por favor intenta otra vez.</p>
+            </div>
+        {% endif %}
+
+        <form id="form-login" method="post" action="">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">{{ form.username.label }}</label>
+                {{ form.username|add_class:"input-field" }}  <!-- Agrega clase para estilos -->
+            </div>
+            <div class="input-group">
+                <label for="password">{{ form.password.label }}</label>
+                {{ form.password|add_class:"input-field" }}  <!-- Agrega clase para estilos -->
+            </div>
+            <button id="btn-registrar" class="button_large">Iniciar sesión</button>
+        </form>
+        
+        <a href="#" class="txt-verde">¿Olvidaste tu contraseña?</a>
+        <a href="#" class="txt-verde">Crear cuenta</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

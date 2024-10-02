@@ -52,10 +52,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'projecto.urls'
 import os
+# projecto/settings.py
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],  # Asegúrate de que esto esté presente
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +69,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'projecto.wsgi.application'
 
@@ -118,6 +121,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+STATICFILES_DIRS = [BASE_DIR / "static"]
+
+# projecto/settings.py
+
+LOGIN_URL = 'login'  # Ruta para la vista de inicio de sesión
+LOGIN_REDIRECT_URL = 'home'  # Ruta a la que se redirige después de iniciar sesión
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
