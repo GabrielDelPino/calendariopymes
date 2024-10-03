@@ -1,56 +1,97 @@
-/* static/css/styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #ffcc00, #ff9900);
-    color: #333;
+/* styles.css */
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 80vh;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    
 }
 
-.container-form {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px; /* Ajusta el ancho según sea necesario */
-    text-align: center;
-}
-
-.input-group {
-    margin: 15px 0;
-}
-
-.input-field {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.button_large {
-    background-color: #ff9900;
+.left-section {
+    background: linear-gradient(to right, #2d2d2d, #d4a130);
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+    margin-right: 110px;
+    height: 100vh;
+    width: 1000px;
+    padding: 100px;
+    padding-left: 50px;
+    
 }
 
-.button_large:hover {
-    background-color: #cc7a00;
+.left-section h1 {
+    font-size: 2.5rem;
+    font-size: 100px;
 }
 
-.txt-verde {
-    color: #ff9900;
+.right-section {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
     text-decoration: none;
 }
 
-.txt-verde:hover {
+.forgot-password:hover {
     text-decoration: underline;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.btn-primary {
+    background-color: #d4a130;
+    border-color: #d4a130;
+    width: 40%;
+}
+
+.btn-secondary {
+    background-color: #d4a130;
+    border-color: #d4a130;
+    width: 40%;
+}
+
+.btn:hover {
+    background-color: #b68927;
+}
+
+
+.form-control {
+    border: 2px solid #b68927;
+}
+
+
+.form-control:focus { 
+    background-color: #b68927;
+}
+
+.form-control {
+    background-color: #b68927; 
+}
+
+.custom-img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 50px; 
+    margin-top: -200px; 
 }
 
 
