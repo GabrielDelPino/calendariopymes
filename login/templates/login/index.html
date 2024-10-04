@@ -1,33 +1,13 @@
 {% extends 'base.html' %}
-{% block content %}
-<div class="container-fluid">
-  <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
-      <div class="col-md-5 left-section text-center d-flex flex-column justify-content-center">
-          <h1>CalendarioPyme</h1>
-          <p>CalendarioPyme te ayuda a organizarte</p>
-      </div>
-      <div class="col-md-5 right-section">
-          <form>
-              <div class="mb-3">
-                  <label for="email" class="form-label">
-                      Correo Electrónico
-                  </label>
-                  <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
-              </div>
-              <div class="mb-3">
-                  <label for="password" class="form-label">
-                      Contraseña
-                  </label>
-                  <input type="password" class="form-control" id="password" placeholder="Contraseña">
-              </div>
-              <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-              <div class="button-group mt-3">
-                  <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                  <button type="button" class="btn btn-secondary">Crear cuenta</button>
-              </div>
-          </form>
-      </div>
-  </div>
-</div>
 
+{% block content %}
+<div class="container">
+    <h2>Iniciar Sesión</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+    </form>
+    <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Regístrate aquí</a></p>
+</div>
 {% endblock %}

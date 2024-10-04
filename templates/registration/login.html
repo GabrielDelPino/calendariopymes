@@ -39,7 +39,7 @@
                 <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
                 <div class="button-group mt-3">
                     <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-                    <a href="#" class="btn btn-secondary">Crear cuenta</a>
+                    <a href="{% url 'register' %}" class="btn btn-secondary">Crear cuenta</a> <!-- Redirigir al formulario de registro -->
                 </div>
             </form>
         </div>
@@ -47,6 +47,7 @@
 </div>
 
 {% endblock %}
+
 
 
 
